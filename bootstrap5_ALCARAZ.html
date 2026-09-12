@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcaraz's Authentic Italian Bakery</title>
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
+    
+    <!-- Bootstrap Icons & SweetAlert2 (Loaded via CDN as only Bootstrap requires local hosting) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        /* CSS for Dark Mode Toggle */
+        body { transition: background-color 0.3s, color 0.3s; }
+        body.dark-mode { background-color: #212529; color: #f8f9fa; }
+        body.dark-mode .card { background-color: #343a40; color: #f8f9fa; border-color: #495057; }
+        body.dark-mode .bg-light { background-color: #2c3034 !important; }
+        body.dark-mode .text-muted { color: #adb5bd !important; }
+        
+        /* Bakery Themed Color */
+        .text-bakery { color: #d35400; }
+        .bg-bakery { background-color: #d35400; color: white; }
+    </style>
+</head>
+<body id="home">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-bakery" href="#home">
+                <i class="bi bi-shop"></i> Alcaraz's Italian Bakery
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <button id="themeToggle" class="btn btn-outline-dark ms-3">
+                    <i class="bi bi-moon-stars-fill"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="py-5 bg-light text-center">
+        <div class="container py-5">
+            <span class="badge bg-bakery mb-3 fs-6">Fresh from the Oven</span>
+            <h1 class="display-4 fw-bold">Authentic Taste of Italy</h1>
+            <p class="lead text-muted mb-4">Artisan breads, classic cannolis, and traditional pastries baked fresh daily using recipes passed down through generations.</p>
+            <a href="#pricing" class="btn bg-bakery btn-lg px-4 me-2">Order Now</a>
+            <a href="#features" class="btn btn-outline-secondary btn-lg px-4">Our Menu</a>
+        </div>
+    </header>
+
+    <!-- Feature Cards -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="bi bi-basket text-bakery fs-1 mb-3"></i>
+                            <h3 class="card-title">Artisan Breads</h3>
+                            <p class="card-text">From rustic Ciabatta to fragrant Focaccia, our breads are baked daily with traditional sourdough starters.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="bi bi-star text-bakery fs-1 mb-3"></i>
+                            <h3 class="card-title">Classic Pastries</h3>
+                            <p class="card-text">Enjoy our signature crisp Cannoli filled with sweet ricotta, alongside flaky Sfogliatelle.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="bi bi-cup-hot text-bakery fs-1 mb-3"></i>
+                            <h3 class="card-title">Italian Espresso</h3>
+                            <p class="card-text">Pair your favorite pastry with a rich, dark-roasted Italian espresso imported straight from Rome.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Bakery Packages</h2>
+                <p class="text-muted">Perfect for families, offices, and special events.</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header py-3"><h4 class="my-0 fw-normal">Starter Box</h4></div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">₱450<small class="text-muted fw-light">/box</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>2 Classic Cannolis</li>
+                                <li>1 Loaf of Fresh Focaccia</li>
+                                <li>2 Tiramisu Cups</li>
+                                <li>Perfect for couples</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-secondary">Order Starter</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card shadow-sm border-warning h-100">
+                        <div class="card-header py-3 bg-bakery text-white border-warning">
+                            <h4 class="my-0 fw-normal">La Famiglia (Pro)</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">₱950<small class="text-muted fw-light">/box</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>6 Assorted Pastries</li>
+                                <li>2 Artisan Bread Loaves</li>
+                                <li>Large Box of Biscotti</li>
+                                <li>Free Delivery</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg bg-bakery">Order La Famiglia</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header py-3"><h4 class="my-0 fw-normal">Event Catering (Enterprise)</h4></div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">₱3,500<small class="text-muted fw-light">/event</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Full Dessert Buffet Setup</li>
+                                <li>Custom Italian Wedding Cakes</li>
+                                <li>Unlimited Espresso Bar</li>
+                                <li>Dedicated Staff</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-secondary">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section id="testimonials" class="py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">What Our Customers Say</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="lead fst-italic">"The absolute best cannoli I've had outside of Sicily! The crust is perfectly flaky."</p>
+                        <p class="fw-bold">- Maria Santos, Food Critic</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="lead fst-italic">"I order their focaccia bread every weekend. It's soft, flavorful, and incredibly fresh."</p>
+                        <p class="fw-bold">- John D., Regular Customer</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-4">Place an Order or Say Ciao!</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailAddress" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="emailAddress" name="emailAddress" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderMessage" class="form-label">Message / Order Details</label>
+                            <textarea class="form-control" id="orderMessage" name="orderMessage" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn bg-bakery btn-lg w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark text-white text-center">
+        <p class="mb-0">&copy; 2026 Alcaraz's Italian Bakery. All rights reserved.</p>
+    </footer>
+
+    <!-- Local Bootstrap JS -->
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // 1. Dark/Light Mode Toggling
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const body = document.body;
+        const icon = themeToggleBtn.querySelector('i');
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('bi-moon-stars-fill');
+                icon.classList.add('bi-sun-fill');
+            } else {
+                icon.classList.remove('bi-sun-fill');
+                icon.classList.add('bi-moon-stars-fill');
+            }
+        });
+
+        // 2. SweetAlert2 Form Submission Event Listener
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page refresh
+            
+            // Trigger SweetAlert2 popup
+            Swal.fire({
+                title: 'Grazie!',
+                text: 'Your message has been sent successfully. We will get back to you soon!',
+                icon: 'success',
+                confirmButtonColor: '#d35400',
+                confirmButtonText: 'Perfect'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.reset(); // Clear the form
+                }
+            });
+        });
+    </script>
+</body>
+</html>
