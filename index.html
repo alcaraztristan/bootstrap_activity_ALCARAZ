@@ -209,7 +209,7 @@
         <p class="mb-0">&copy; 2026 Alcaraz's Italian Bakery. All rights reserved.</p>
     </footer>
 
-    <!-- Local Bootstrap JS -->
+  
     <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
 
     <script>
@@ -229,11 +229,9 @@
             }
         });
 
-        // 2. SweetAlert2 Form Submission Event Listener
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent page refresh
+            e.preventDefault(); 
             
-            // Trigger SweetAlert2 popup
             Swal.fire({
                 title: 'Grazie!',
                 text: 'Your message has been sent successfully. We will get back to you soon!',
@@ -242,7 +240,7 @@
                 confirmButtonText: 'Perfect'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    this.reset(); // Clear the form
+                    this.reset(); 
                 }
             });
         });
